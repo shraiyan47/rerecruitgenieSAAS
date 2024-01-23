@@ -1,7 +1,7 @@
-import users from './user.js' 
+import users from './sysUser.js' 
  
 const mountRoutes = (app) => {
-  app.use('/users', users) 
+  app.use('/sys-users', users) 
   // etc..
 }
  
