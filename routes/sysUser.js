@@ -2,7 +2,7 @@
 import express from "express";
 
 // import {  allUser, updateUserProfile, userDelete, userProfile } from "../controllers/userController.js";
-import { createSysUser ,userProfile } from "../controllers/sysUserController/sysUserController.js";
+import { createSysUser ,loginSysUser,userProfile } from "../controllers/sysUserController/sysUserController.js";
 import { verifyToken, verifyUser, verifyAdmin } from "../utils/verifyToken.js";
 
 const router = express.Router();
@@ -18,6 +18,7 @@ export default router
 // router.put("/user-profile-update/:id", verifyUser, updateUserProfile)
 // router.delete("/user-delete/:id",verifyUser, userDelete)
 router.post("/create", createSysUser)
+router.post("/login", loginSysUser)
 router.get("/getSingle/:id", userProfile)
 // router.get("/user-list/",verifyAdmin, allUser)
 
