@@ -11,7 +11,7 @@ const createSysUserTable = `
         full_name VARCHAR(70) DEFAULT NULL,
         email VARCHAR(70) NOT NULL UNIQUE,
         username VARCHAR(250) DEFAULT NULL UNIQUE,
-        password VARCHAR(50) DEFAULT 'asdf1234',
+        password VARCHAR(250) DEFAULT 'asdf1234',
         usre_role_id INTEGER DEFAULT 1
     );
 `;
