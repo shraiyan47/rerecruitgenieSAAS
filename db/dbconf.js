@@ -1,7 +1,7 @@
 import pg from 'pg'
 
 const db = new pg.Pool({
-    host: '115.127.82.154',
+    host: (process.env.DB_HOST_TYPE === "prod")?process.env.DB_HOST:process.env.DB_LOCALHOST,
     port: '5432',
     user: 'postgres',
     password: 'psql@123',
